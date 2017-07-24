@@ -4,20 +4,56 @@
 
 	<groupId>pt.uminho.ceb.biosystems.mew</groupId>
 	<artifactId>mew-biologicalnets-core</artifactId>
-	<version>0.0.3-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
 	<name>biologicalnetscore</name>
-	<url>http://maven.apache.org</url>
+	<description>Biological Nets Core for MEWorkbench</description>
+	<url>https://github.com/MEWorkbench/biologicalnetscore</url>
+	
+	<developers>
+		<developer>
+			<name>Paulo Maia</name>
+			<email>pmaia@silicolife.com</email>
+			<organization>SilicoLife Lda</organization>
+			<organizationUrl>http://www.silicolife.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Pedro Evangelista</name>
+			<email>pevangelista@silicolife.com</email>
+			<organization>SilicoLife Lda</organization>
+			<organizationUrl>http://www.silicolife.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Paulo Vilaca</name>
+			<email>hgiesteira@silicolife.com</email>
+			<organization>SilicoLife Lda</organization>
+			<organizationUrl>http://www.silicolife.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Hugo Giesteira</name>
+			<email>hgiesteira@silicolife.com</email>
+			<organization>SilicoLife Lda</organization>
+			<organizationUrl>http://www.silicolife.com</organizationUrl>
+		</developer>
+		<developer>
+			<name>Miguel Rocha</name>
+			<email>mrocha@di.uminho.pt</email>
+			<organization>University of Minho</organization>
+			<organizationUrl>https://www.uminho.pt</organizationUrl>
+		</developer>
+	</developers>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>1.7</maven.compiler.source>
 		<maven.compiler.target>1.7</maven.compiler.target>
+		<project.sign.skip>true</project.sign.skip>
 	</properties>
 
 	<scm>
 		<developerConnection>${project.scm.url}</developerConnection>
+		<url>https://github.com/MEWorkbench/biologicalnetscore</url>
 	</scm>
 	
 	<dependencies>
@@ -90,6 +126,25 @@
 						<goals>
 							<goal>jar</goal>
 						</goals>
+						<configuration>
+							<additionalparam>-Xdoclint:none</additionalparam>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-gpg-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>sign-artifacts</id>
+						<phase>verify</phase>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+						<configuration>
+							<skip>${project.sign.skip}</skip>
+						</configuration>
 					</execution>
 				</executions>
 			</plugin>
