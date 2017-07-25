@@ -42,6 +42,14 @@
 			<organizationUrl>https://www.uminho.pt</organizationUrl>
 		</developer>
 	</developers>
+	
+	<licenses>
+		<license>
+			<name>LGPLv2.1</name>
+			<url>https://www.gnu.org/licenses/lgpl-2.1.html</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
