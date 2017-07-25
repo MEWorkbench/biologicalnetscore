@@ -52,7 +52,7 @@
 	</properties>
 
 	<scm>
-		<developerConnection>${project.scm.url}</developerConnection>
+		<developerConnection>${project.scm.devcon}</developerConnection>
 		<url>https://github.com/MEWorkbench/biologicalnetscore</url>
 	</scm>
 	
