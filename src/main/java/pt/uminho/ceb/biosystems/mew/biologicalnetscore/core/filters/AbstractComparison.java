@@ -13,7 +13,6 @@ public abstract class AbstractComparison<T> {
 	/**
 	 * Receives the data to be used in the analysis.
 	 * @param data the data received
-	 * @param datatype the type of data received
 	 */
 	abstract protected void inputData(T data);
 	

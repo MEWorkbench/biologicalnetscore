@@ -106,7 +106,7 @@ public interface INetwork {
 	/**
 	 * 
 	 * @param type
-	 * @returnReturns a representation of all the nodes of a type using a QRTable object.
+	 * @return Returns a representation of all the nodes of a type using a QRTable object.
 	 */
 	public QRTable getNodeTypeValues(String type);
 

@@ -14,7 +14,6 @@ public abstract class AbstractFilter {
 	protected int maskSize;
 	/**
 	 * Returns a boolean mask to defines the nodes to be shown.
-	 * @param dataTable
 	 * @return
 	 */
 	
